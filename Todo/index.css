@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to top, black, orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.todo-app h1 {
+    color: black;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background-color: #ccc;
+    border-radius: 30px;
+    padding-left: 20px;
+}
+
+#taskInput {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+}
+
+#addButton {
+    background-color: orange;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#addButton:hover {
+    background-color: darkorange;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    font-size: 18px;
+    padding: 12px 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-text {
+    flex: 1; 
+    text-align: left;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px; 
+}
+
+button {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+ul li.checked {
+    text-decoration: line-through;
+    color: #888;
+    align-items: end;
+}
+
+.deleteButton {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.deleteButton:hover {
+    background-color: #cc0000;
+}
+
+.checkButton{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkButton:hover {
+    background-color: #45a049;
+}
