@@ -1,0 +1,13 @@
+<h1>Agenda de Contactos</h1>
+<div class="row">
+  <input type="text" id="taskInput" placeholder="Nombre de contacto">
+  <button id="searchbUtton">Buscar</button>
+  <button id="newContact" (click)="openForm()">
+    Añadir contacto
+  </button>
+</div>
+<mat-list>
+  <app-contact-card></app-contact-card>
+  <mat-divider></mat-divider>
+  <app-contact-card></app-contact-card>
+</mat-list>

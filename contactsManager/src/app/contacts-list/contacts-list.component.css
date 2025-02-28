@@ -1,0 +1,103 @@
+:host {
+  background-color: #f5deb3;
+  width: 60%;
+  border-radius: 20px;
+  border: 2px solid #000;
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+#taskInput {
+  background-color: #f8f8f8;
+  color: black;
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  flex: 1 1 auto;
+}
+
+button {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  flex: 1 1 auto;
+}
+
+#searchbUtton {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  flex: 1 1 auto;
+}
+
+#searchbUtton:hover {
+  background-color: #45a049;
+}
+
+#newContact {
+  background-color: #3674B5;
+}
+
+#newContact:hover {
+  background-color: #578FCA;
+}
+
+mat-list {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+mat-divider {
+  margin: 10px;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  :host {
+    width: 90%;
+    padding: 20px;
+  }
+
+  #taskInput {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  button, #searchbUtton {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
