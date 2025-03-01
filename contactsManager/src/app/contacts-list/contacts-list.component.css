@@ -28,6 +28,7 @@ h1 {
   align-items: center;
   margin-bottom: 20px;
   flex-wrap: wrap;
+  gap: 10px; /* Espacio entre elementos */
 }
 
 #taskInput {
@@ -37,7 +38,6 @@ h1 {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-right: 10px;
   flex: 1 1 auto;
 }
 
@@ -47,20 +47,15 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  flex: 1 1 auto;
+  flex: 1 1 auto; /* Hace que los botones tengan el mismo tamaño */
+  min-width: 120px; /* Ancho mínimo para ambos botones */
 }
 
-#searchbUtton {
-  padding: 10px 20px;
+#searchButton {
   background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  flex: 1 1 auto;
 }
 
-#searchbUtton:hover {
+#searchButton:hover {
   background-color: #45a049;
 }
 
@@ -79,25 +74,102 @@ mat-list {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-mat-divider {
-  margin: 10px;
-  color: #000;
+mat-card {
+  margin-bottom: 10px;
 }
 
+mat-card-content {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.contact-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-button {
+  background-color: #FFA500;
+}
+
+.edit-button:hover {
+  background-color: #FF8C00;
+}
+
+.delete-button {
+  background-color: #FF6347;
+}
+
+.delete-button:hover {
+  background-color: #FF4500;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
   :host {
     width: 90%;
     padding: 20px;
   }
 
+  .row {
+    flex-direction: column;
+  }
+
   #taskInput {
     width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  mat-card-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-image {
     margin-right: 0;
     margin-bottom: 10px;
   }
 
-  button, #searchbUtton {
+  .buttons-container {
     width: 100%;
-    margin-bottom: 10px;
+    justify-content: space-between;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info p {
+    font-size: 14px;
+  }
+
+  button {
+    padding: 8px 12px;
   }
 }
