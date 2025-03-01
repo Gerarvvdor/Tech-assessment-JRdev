@@ -1,13 +1,25 @@
-<h1>Agenda de Contactos</h1>
-<div class="row">
-  <input type="text" id="taskInput" placeholder="Nombre de contacto">
-  <button id="searchbUtton">Buscar</button>
-  <button id="newContact" (click)="openForm()">
-    Añadir contacto
-  </button>
+<div>
+  <h1>Agenda de Contactos</h1>
+
+  <div class="row">
+    <input type="text" id="taskInput" placeholder="Nombre de contacto"><button id="searchButton">Buscar</button>
+    <button id="newContact" mat-raised-button (click)="openDialog()">Nuevo contacto</button>
+  </div>
+  <mat-list>
+    <mat-card *ngFor="let contact of contacts" appearance="outlined">
+      <mat-card-content>
+        <img src="https://cdn-icons-png.flaticon.com/512/6522/6522516.png" alt="Imagen de contacto"
+          class="contact-image">
+        <div class="contact-info">
+          <a><strong>Nombre:</strong> {{ contact.name }} {{ contact.lastName }}</a>
+          <p><strong>Teléfono:</strong> {{ contact.phoneNumber || 'No disponible' }}</p>
+          <p><strong>Email:</strong> {{ contact.email || 'No disponible' }}</p>
+        </div>
+        <div class="buttons-container">
+          <button class="edit-button">Editar</button>
+          <button class="delete-button" (click)="deleteContact(contact.id)">Eliminar</button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </mat-list>
 </div>
-<mat-list>
-  <app-contact-card></app-contact-card>
-  <mat-divider></mat-divider>
-  <app-contact-card></app-contact-card>
-</mat-list>
