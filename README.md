@@ -10,8 +10,4 @@ These tasks are stored in the device's local storage ensuring data persistence.
 
 The second part consists of a contact manager with angular.
 
-Due to no experience with "Angular" at the moment it only contains the views and the routing necessary for navigation.
-
-The views were created with Angular material and CSS. 
-
-It is hoped that full CRUD functionality can be added to the components prior to review by the recruiting team.
+Due to no experience with "Angular" at the moment it only contains the views and only works create, read and delete contacts.
